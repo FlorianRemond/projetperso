@@ -1,0 +1,21 @@
+
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}projet perso{% endblock %}</title>
+    {% block stylesheets %}Ceci est la page de vue d'un musicien{% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body>
+{% block body %}Ajouter un Musicien{% endblock %}
+
+{{ form_row(formMusicien.Name) }}
+{{ form_row(formMusicien.Instrument) }}
+{{ form_row(formMusicien.Mail) }}
+
+
+
+<input type="submit" value="Enregistrer le musicien" />
+{% block javascripts %}{% endblock %}
+</body>
+</html>

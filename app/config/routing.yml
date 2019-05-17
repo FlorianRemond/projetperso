@@ -1,0 +1,15 @@
+app:
+    resource: '@AppBundle/Controller/DefaultController.php'
+    type: annotation
+
+musicien:
+    resource: '@AppBundle/Controller/MusicienController.php'
+    type: annotation
+
+instrument:
+    resource: '@AppBundle/Controller/InstrumentController.php'
+    type: annotation
+
+
+
+
