@@ -1,0 +1,13 @@
+
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}projet perso{% endblock %}</title>
+    {% block stylesheets %}Ceci est la page de vue des instrument{% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body>
+{% block body %}Instruments{% endblock %}
+{% block javascripts %}{% endblock %}
+</body>
+</html>
