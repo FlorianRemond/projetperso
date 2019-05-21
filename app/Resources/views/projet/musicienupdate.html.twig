@@ -1,0 +1,26 @@
+
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}projet perso{% endblock %}</title>
+    {% block stylesheets %}Ceci est la page de modification en base{% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body>
+{% block body %}Musicien{% endblock %}
+<h1>Tous les Musiciens</h1>
+<table>
+    {% for key,musicien in musiciens %}
+        <tr>
+            <td>{{ musicien.getName() }}</td>
+            <td>{{ musicien.getInstrument() }}</td>
+            <td>{{ musicien.getMail() }}</td>
+            <td>{{ musicien.getCreatedAt() | date('d/m/Y H:i') }}</td>
+            <td><a href="{{ path('musicien_view_url', {'id': musicien.id} ) }}">Séléctionner</a></td>
+        </tr>
+    {% endfor %}
+</table>
+
+{% block javascripts %}{% endblock %}
+</body>
+</html>
