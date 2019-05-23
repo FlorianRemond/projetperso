@@ -1,4 +1,3 @@
-
 <html>
 <head>
     <meta charset="UTF-8" />
@@ -7,20 +6,17 @@
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
 </head>
 <body>
-{% block body %}Musicien{% endblock %}
+{% block body %}Veuillez sélectionner la personne à modifier {% endblock %}
+
 <h1>Tous les Musiciens</h1>
-<table>
-    {% for key,musicien in musiciens %}
-        <tr>
-            <td>{{ musicien.getName() }}</td>
-            <td>{{ musicien.getInstrument() }}</td>
-            <td>{{ musicien.getMail() }}</td>
-            <td>{{ musicien.getCreatedAt() | date('d/m/Y H:i') }}</td>
-            <td><a href="{{ path('musicien_view_url', {'id': musicien.id} ) }}">Séléctionner</a></td>
-        </tr>
+
+    {% for musicien in musiciens %}
+
+<p><a href="{{ path('musicien_update'),{'id':musicien.id }}"/>{{ musicien.name }} - {{ musicien.instrument }} - {{ musicien.mail }}</a></p>
+
     {% endfor %}
-</table>
 
 {% block javascripts %}{% endblock %}
 </body>
 </html>
+https://www.youtube.com/watch?v=Crgqnpcda30

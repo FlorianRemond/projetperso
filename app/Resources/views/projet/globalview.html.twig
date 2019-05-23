@@ -2,12 +2,29 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>{% block title %}projet perso{% endblock %}</title>
-    {% block stylesheets %}Ceci est la page de vue des instrument{% endblock %}
-    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    <title>{% block title %}Projet perso{% endblock %}</title>
+    <div align="center"style="font-size: 30px; background-color: black; color: white">{% block stylesheets %}Vue Globale{% endblock %}</div>
 </head>
 <body>
-{% block body %}Instruments{% endblock %}
+{% block body %}
+    <h1 align="center" style="color: #0000F0;font-size: 25px">Merci de faire votre choix : </h1>
+    <div align="center"><a href="http://localhost/php/Projet%20perso/projetperso/web/app_dev.php/musicien/insert" style="font-size: 20px;color: black ">- Ajout d'un musicien en base</a><br><br></div>
+    <div align="center"> <a href="http://localhost/php/Projet perso/projetperso/web/app_dev.php/musicien/remove" style="font-size: 20px; color:blue"> - Suppression d'un musicien en base </a><br><br></div>
+    <div align="center"> <a href="http://localhost/php/Projet%20perso/projetperso/web/app_dev.php/musicien/update" style="color:green; font-size: 20px">- Modification d'un musicien en base </a><br><br></div>
+
+    <table align="center" >
+    {% for key,musicien in musiciens %}
+        <tr>
+            <td>{{ musicien.getName() }}</td>
+            <td>{{ musicien.getInstrument() }}</td>
+            <td>{{ musicien.getMail() }}</td>
+            <td>{{ musicien.getCreatedAt() | date('d/m/Y H:i') }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+    <div align="center"style="font-size: 30px; background-color: black; color: black;margin-top: 20px">Vue Globale</div>
+
+{% endblock %}
 {% block javascripts %}{% endblock %}
 </body>
 </html>

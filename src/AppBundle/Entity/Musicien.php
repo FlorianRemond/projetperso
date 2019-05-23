@@ -54,7 +54,7 @@ class Musicien
      */
     public function __construct()
     {
-
+   $this->setCreatedAt(new\DateTime());
     }
 
     /**
@@ -163,9 +163,5 @@ class Musicien
         return $this->createdAt;
     }
 
-    /**
-     * @ORM\ManyToOne(targetEntity="Instrument", inversedBy="musiciens")
-     * @ORM\JoinColumn(name="instrument_id", referencedColumnName="id")
-     */
-    private $musicien;
+
 }

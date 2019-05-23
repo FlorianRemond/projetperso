@@ -1,14 +1,14 @@
 
-<html>
+<br>
 <head>
     <meta charset="UTF-8" />
     <title>{% block title %}projet perso{% endblock %}</title>
     {% block stylesheets %}Ceci est la page de vue d'un musicien{% endblock %}
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
 </head>
-<body>
 {% block body %}Musiciens{% endblock %}
-<h1>Un musicien {{ musicien.getId() }} choisi</h1>
+
+<h1>Le musicien {{ musicien.getId() }} est sélectionné : </h1>
 <table>
             <tr>
             <td>{{ musicien.getName() }}</td>

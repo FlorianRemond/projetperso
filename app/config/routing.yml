@@ -9,6 +9,9 @@ musicien:
 instrument:
     resource: '@AppBundle/Controller/InstrumentController.php'
     type: annotation
+globale:
+    resource: '@AppBundle/Controller/GlobalController.php'
+    type: annotation
 
 
 

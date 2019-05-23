@@ -62,9 +62,4 @@ class Instrument
     {
         return $this->name;
     }
-
-    /**
-     * @ORM\OneToOne(targetEntity="musicien")
-     */
-    private $musicen;
-}
+    }

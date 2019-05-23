@@ -16,6 +16,7 @@
             <td>{{ musicien.getInstrument() }}</td>
             <td>{{ musicien.getMail() }}</td>
             <td>{{ musicien.getCreatedAt() | date('d/m/Y H:i') }}</td>
+            <td><a href="{{ path('musicien_view_url', {'id': musicien.id} ) }}">Séléctionner</a></td>
         </tr>
     {% endfor %}
 </table>

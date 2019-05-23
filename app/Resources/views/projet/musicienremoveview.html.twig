@@ -3,11 +3,24 @@
 <head>
     <meta charset="UTF-8" />
     <title>{% block title %}projet perso{% endblock %}</title>
-    {% block stylesheets %}Ceci est la page de vue des instrument{% endblock %}
+    {% block stylesheets %}Ceci est la page de suppression en base{% endblock %}
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
 </head>
 <body>
-{% block body %}Instruments{% endblock %}
+{% block body %}Veuillez sélectionner la personne à supprimer {% endblock %}
+
+<h1>Tous les Musiciens</h1>
+<table>
+    {% for key,musicien in musiciens %}
+        <tr>
+            <td>{{ musicien.getName() }}</td>
+            <td>{{ musicien.getInstrument() }}</td>
+            <td>{{ musicien.getMail() }}</td>
+            <td>{{ musicien.getCreatedAt() | date('d/m/Y H:i') }}</td>
+            <td><a href="{{ path('musicien_remove_id', {'id': musicien.id} ) }}">Selectionner</a></td>
+        </tr>
+    {% endfor %}
+</table>
 {% block javascripts %}{% endblock %}
 </body>
 </html>

@@ -9,13 +9,15 @@
 <body>
 {% block body %}Ajouter un Musicien{% endblock %}
 
-{{ form_row(formMusicien.Name) }}
-{{ form_row(formMusicien.Instrument) }}
-{{ form_row(formMusicien.Mail) }}
-
-
-
+{{ form_start(formMusicien) }}
+    {{ form_row(formMusicien.name) }}
+    {{ form_row(formMusicien.instrument) }}
+    {{ form_row(formMusicien.mail) }}
 <input type="submit" value="Enregistrer le musicien" />
+{{ form_end(formMusicien) }}
+
+
+
 {% block javascripts %}{% endblock %}
 </body>
 </html>
