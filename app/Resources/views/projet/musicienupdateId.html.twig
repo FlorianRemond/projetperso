@@ -3,21 +3,23 @@
 <head>
     <meta charset="UTF-8" />
     <title>{% block title %}projet perso{% endblock %}</title>
-    {% block stylesheets %}Ceci est la page de mofification d'un musicien{% endblock %}
+    {% block stylesheets %}Ceci est la page de modification d'un musicien{% endblock %}
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
 </head>
 {% block body %}Musiciens{% endblock %}
 
-<h1>Le musicien {{ musicien.getId() }} est sélectionné : </h1>
+<h1>Le musicien {{ musicien.getName() }} est sélectionné : </h1>
+
 <table>
     <tr>
-        <td>{{ musicien.getname() }}</td>
-        <td>{{ musicien.getinstrument() }}</td>
-        <td>{{ musicien.getmail() }}</td>
-        <td>{{ musicien.getcreatedAt() | date('d/m/Y H:i') }}</td>
+        <td>{{ musicien.getName()}}</td>
+        <td>{{ musicien.getInstrument() }}</td>
+        <td>{{ musicien.getMail() }}</td>
+        <td>{{ musicien.getCreatedAt() | date('d/m/Y H:i') }}</td>
     </tr>
-
 </table>
+<input type="submit" value="Confirmer la modification" />
+
 {% block javascripts %}{% endblock %}
 </body>
 </html>

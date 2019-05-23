@@ -93,9 +93,7 @@ class MusicienController extends Controller
         return $this->render('projet/musicieninsert.html.twig', [
             'formMusicien' => $form->createView()
         ]);
-
     }
-
 
     /**
      * @Route("/musicien/remove", name="musicien_remove")
@@ -127,48 +125,60 @@ class MusicienController extends Controller
         return new Response("Musicien bien supprimé");
     }
 
-      /**
-     * @Route("musicien/update", name="musicien_update")
+    /**
+     * @Route("/musicien/list", name="musicien_list")
      * @return Response
      */
-    public function updateAction(Request $request)
+    public function musicienListAction(Request $request)
     {
-        $repository = $this->getDoctrine()->getRepository
-        ('AppBundle:Musicien');
-
-        $musiciens = $repository->findAll();
-
-        return $this ->render('musicienupdate.html.twig',
+        $repository = $this -> getDoctrine()->getRepository(Musicien::class);
+        $musiciens =$repository->findAll();
+        return $this -> render('/projet/MusicienListview.html.twig',
             array('musiciens'=>$musiciens));
     }
 
 
     /**
-     * @Route("musicien/update/{id} ", name="musicien_update")
+     * @Route ("/edit/{id}", name="musicien_edit")
      * @return Response
      */
-    public function edit(){
-        //on récupère le formulaire
-         $form =$this->createForm('AppBundle\Form\MusicienType'::class,
-    $musicien);
+    public function edit(Request $request ,Musicien $musicien)
+    {
 
-         $form->handleRequest($request);
+        // 2- à partir du service "form.factory", créer un "formBuilder" qui va nous servir à créer
+        // un objet formulaire.
+        // On appelle la méthode createBuilder du form.factory en lui passant deux paramètres :
+        //    1- la classe formulaire créée auparavant : MusicienType::class
+        //    2- puis l'objet à lier à ce formulaire : $musicien
+        $formBuilder = $this->get('form.factory')->createBuilder(MusicienType::class, $musicien);
+        // 3- à partir du formBuilder, on génère l'objet formulaire
+        $form = $formBuilder->getForm();
+        // 4- récupérer les données envoyées pour hydrater l'objet
+        $form->handleRequest($request);
+        // 5-
+        // si le formulaire a été soumis, alors enregistrer l'objet article
+        // dont les propriétés ont été automatiquement settées
+        // par le composant formulaire lros du "handleRequest"
+        if ($form->isSubmitted()) {
+        // vérifier si le formulaire est valide
+            // isValid() va aller chercher dans la configuration de l'entité les contraintes
+            // et automatiquement faire les vérifcations PHP adéquates$
 
-         //si le formulaire a été soumis
-         if($form->isSubmitted() && $form->isValid()){
-             $em=$this->getDoctrine()->getManager();
+            // toutes les contraintes ici :
+            // https://symfony.com/doc/3.4/reference/constraints.html
+            if ($form->isValid()) {
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($musicien);
+                $em->flush();
+                return $this->redirectToRoute('globalview');
+            }
+        }
 
-        // pas d'utilité car l'objet provient de la BDD
-         //    $em->persist($musicien);
-             $em->flush();
-
-             return new Response('Musicien Modifié');
-         }
-         $formView=$form->createView();
-
-         return $this ->render('musicienupdate.html.twig',
-             array('form'=>$formView));
+        // 6- générer le template twig en lui passant la vue de l'objet formulaire
+        // dans le template twig "article/insert.html.twig", on aura ainsi accès à la variable formArticle
+        return $this->render('projet/musicieninsert.html.twig', [
+            'formMusicien' => $form->createView()
+        ]);
     }
-
 }
 

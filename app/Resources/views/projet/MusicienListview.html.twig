@@ -8,9 +8,12 @@
 
 <h1>Tous les Musiciens</h1>
 
+ {% for musicien in musiciens %}
+    <p><a href="{{ path('musicien_edit', {'id':musicien.id}) }}">{{ musicien.name }} - {{ musicien.instrument }} - {{ musicien.mail }}
+    </a></p>
 
+{% endfor %}
 {% block javascripts %}{% endblock %}
 </body>
 </html>
 
-https://www.youtube.com/watch?v=Crgqnpcda30&list=PLXGXMIp685ivenXf3UWKgt1ykpRiaMJPZ&index=4
