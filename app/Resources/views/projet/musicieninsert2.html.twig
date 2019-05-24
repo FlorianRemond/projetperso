@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+{%  block body%}
+
+<html>
+<head>
+    <meta charset="UTF-8" />
+
+  <br>  <h1 align="center"style="font-size: 30px; color: white ; background-color: olive ">Initilisation de la base données</h1>
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body>
+<div style="margin-top:5%"; align="center">
+    <p1> La base de données est vide, avant toute utilisation du formulaire il est nécessaire d'ajouter un musicien en base.</p1><br>
+<br><h2 align="center"style="text-decoration:underline"> Veuillez compléter les champs</h2><br>
+
+{{ form_start(formMusicien) }}
+    {{ form_row(formMusicien.name) }}<br>
+    {{ form_row(formMusicien.instrument) }}<br>
+    {{ form_row(formMusicien.mail) }}<br><br>
+    <button type="submit" class="btn btn-primary">Enregistrement</button>
+    {{ form_end(formMusicien) }}
+</div>
+{% block javascripts %}{% endblock %}
+</body>
+</html>
+{% endblock %}

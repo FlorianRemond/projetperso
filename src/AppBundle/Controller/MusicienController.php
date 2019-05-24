@@ -23,7 +23,7 @@ class MusicienController extends Controller
         $musiciens = $em->getRepository('AppBundle:Musicien')->findAll();
         $em = $this->getDoctrine()->getManager();
         if ($musiciens == null) {
-            throw new NotFoundHttpException('erreur de récupération des données');
+            return $this->redirectToRoute('musicien_insert2');
         }
         $response = $this->render('projet/globalview.html.twig', [
             'musiciens' => $musiciens]);
@@ -131,10 +131,10 @@ class MusicienController extends Controller
      */
     public function musicienListAction(Request $request)
     {
-        $repository = $this -> getDoctrine()->getRepository(Musicien::class);
-        $musiciens =$repository->findAll();
-        return $this -> render('/projet/MusicienListview.html.twig',
-            array('musiciens'=>$musiciens));
+        $repository = $this->getDoctrine()->getRepository(Musicien::class);
+        $musiciens = $repository->findAll();
+        return $this->render('/projet/MusicienListview.html.twig',
+            array('musiciens' => $musiciens));
     }
 
 
@@ -142,7 +142,7 @@ class MusicienController extends Controller
      * @Route ("/edit/{id}", name="musicien_edit")
      * @return Response
      */
-    public function edit(Request $request ,Musicien $musicien)
+    public function edit(Request $request, Musicien $musicien)
     {
 
         // 2- à partir du service "form.factory", créer un "formBuilder" qui va nous servir à créer
@@ -160,7 +160,7 @@ class MusicienController extends Controller
         // dont les propriétés ont été automatiquement settées
         // par le composant formulaire lros du "handleRequest"
         if ($form->isSubmitted()) {
-        // vérifier si le formulaire est valide
+            // vérifier si le formulaire est valide
             // isValid() va aller chercher dans la configuration de l'entité les contraintes
             // et automatiquement faire les vérifcations PHP adéquates$
 
@@ -177,6 +177,29 @@ class MusicienController extends Controller
         // 6- générer le template twig en lui passant la vue de l'objet formulaire
         // dans le template twig "article/insert.html.twig", on aura ainsi accès à la variable formArticle
         return $this->render('projet/musicieninsert.html.twig', [
+            'formMusicien' => $form->createView()
+        ]);
+    }
+
+
+    /**
+     * @Route("musicien/insert2", name="musicien_insert2")
+     */
+    public function insert2Action(Request $request)
+    {
+        $musicien = new Musicien();
+        $formBuilder = $this->get('form.factory')->createBuilder(MusicienType::class, $musicien);
+        $form = $formBuilder->getForm();
+        $form->handleRequest($request);
+        if ($form->isSubmitted()) {
+            if ($form->isValid()) {
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($musicien);
+                $em->flush();
+                return $this->redirectToRoute('globalview');
+            }
+        }
+        return $this->render('projet/musicieninsert2.html.twig', [
             'formMusicien' => $form->createView()
         ]);
     }
