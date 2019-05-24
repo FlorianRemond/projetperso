@@ -2,12 +2,26 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %} <link rel="stylesheet" href="{{ asset('css/style.css') }}" {% endblock %}
+        <title>{% block title %}Projet Personnel{% endblock %}</title>
+        {% block stylesheets %}
+
+        {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" href="{{ asset('css/bootSup.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('css/bootSup2.css') }}"/>
     </head>
     <body>
-        {% block body %}{% endblock %}
+        {% block body %}
+            <h2  align="center"style="text-decoration:underline">Merci de faire votre choix : </h2><br>
+
+        {% endblock %}
+        {% block footer %}
+            <div  align="center"style="font-size: 10px; color: white;margin-top: 20px ; background-color: olive">Florian REMOND Dev Full Stack junior</div>
+            &copy; Copyright 2019 by <a href="http://domain.invalid/">Florian REMOND</a>.
+
+        {% endblock %}
+
+
         {% block javascripts %}{% endblock %}
     </body>
 </html>

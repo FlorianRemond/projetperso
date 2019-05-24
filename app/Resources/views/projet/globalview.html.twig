@@ -1,30 +1,43 @@
-
+{% extends 'base.html.twig' %}
+{%  block body%}
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>{% block title %}Projet perso{% endblock %}</title>
-    <div align="center"style="font-size: 30px; background-color: black; color: white">{% block stylesheets %}Vue Globale{% endblock %}</div>
+    <title>{% block title %}Projet personnel{% endblock %}</title>
+    <div align="center"style="font-size: 30px; color: white ; background-color: olive ">Vue Globale</div>
 </head>
+
 <body>
-{% block body %}
-    <h1 align="center" style="color: #0000F0;font-size: 25px">Merci de faire votre choix : </h1>
-    <div align="center"><a href="{{ path ('musicien_insert') }}" style="font-size: 20px;color: black ">- Ajout d'un musicien en base</a><br><br></div>
-    <div align="center"> <a href="{{ path ('musicien_remove') }}" style="font-size: 20px; color:blue"> - Suppression d'un musicien en base </a><br><br></div>
-    <div align="center"> <a href="{{ path('musicien_list') }}" style="color:green; font-size: 20px">- Modification d'un musicien en base </a><br><br></div>
+<div style="margin-top:5%"; align="center">
 
-    <table align="center" >
-    {% for key,musicien in musiciens %}
-        <tr>
-            <td>{{ musicien.getName() }}</td>
-            <td>{{ musicien.getInstrument() }}</td>
-            <td>{{ musicien.getMail() }}</td>
-            <td>{{ musicien.getCreatedAt() | date('d/m/Y H:i') }}</td>
-        </tr>
-    {% endfor %}
-    </table>
-    <div align="center"style="font-size: 30px; background-color: black; color: black;margin-top: 20px">Vue Globale</div>
+    <h2  align="center"style="text-decoration:underline">Merci de faire votre choix : </h2><br>
 
-{% endblock %}
-{% block javascripts %}{% endblock %}
+    <a class="btn btn-success" href="{{ path('musicien_insert') }}" role="button">Ajout d'un musicien en base</a><br><br>
+    <a class="btn btn-primary" href="{{ path('musicien_list') }}" role="button">Modification d'un musicien en base</a><br><br>
+    <a class="btn btn-danger" href="{{ path('musicien_remove') }}" role="button"> Suppression d'un musicien en base</a><br><br>
+
+            <table style="margin-left: 10%" class="table table-hover">
+                <thead>
+                <tr>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Instrument</th>
+                    <th scope="col">Mail</th>
+                    <th scope="col">Date de création</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for key,musicien in musiciens %}
+                    <tr>
+                        <td>{{ musicien.getName() }}</td>
+                        <td>{{ musicien.getInstrument() }}</td>
+                        <td>{{ musicien.getMail() }}</td>
+                        <td>{{ musicien.getCreatedAt() | date('d/m/Y H:i') }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+</div>
 </body>
 </html>
+{% endblock %}
+{% block javascripts %}{% endblock %}
+
