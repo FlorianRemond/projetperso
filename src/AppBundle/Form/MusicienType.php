@@ -17,7 +17,7 @@ class MusicienType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name',TextType::class,array('label'=>'Entrer le nom du zikos :',))
+            ->add('name',TextType::class,array('label'=>'Entrer le nom du musicien :',))
             ->add('instrument',TextType::class, array('label'=>'Selectionner l\'instrument :',))
             ->add('mail',EmailType::class,array('label'=>'Enregistrer l\'adresse mail :',));
 

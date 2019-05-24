@@ -1,19 +1,25 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
 <meta charset="UTF-8" />
-<title>{% block title %}Projet perso{% endblock %}</title>
-{% block stylesheets %}Ceci est la page de modification en base{% endblock %}
+<title>{% block title %}Projet personnel{% endblock %}</title>
+    <br><h1 align="center"style="font-size: 30px; color: white ; background-color: olive ">Page de modification en base</h1></br>
+
+
 <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
 </head>
 <body>
-{% block body %}Veuillez sélectionner la personne à modifier {% endblock %}
+<h2  align="center"style="text-decoration:underline">Veuillez sélectionner la personne à modifier</h2><br>
 
-<h1>Tous les Musiciens</h1>
+<div align="center">
 
  {% for musicien in musiciens %}
-    <p><a href="{{ path('musicien_edit', {'id':musicien.id}) }}">{{ musicien.name }} - {{ musicien.instrument }} - {{ musicien.mail }}
+    <p><a style="color:gold" href="{{ path('musicien_edit', {'id':musicien.id}) }}">{{ musicien.name }} - {{ musicien.instrument }} - {{ musicien.mail }}
     </a></p>
-
 {% endfor %}
+</div>
+
 {% block javascripts %}{% endblock %}
 </body>
 </html>
-
+{% endblock %}

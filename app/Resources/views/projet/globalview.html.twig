@@ -1,14 +1,15 @@
 {% extends 'base.html.twig' %}
 {%  block body%}
+
 <html>
 <head>
     <meta charset="UTF-8" />
     <title>{% block title %}Projet personnel{% endblock %}</title>
-    <div align="center"style="font-size: 30px; color: white ; background-color: olive ">Vue Globale</div>
+   <br> <h1 align="center"style="font-size: 30px; color: white ; background-color: olive ">Vue Globale</h1>
 </head>
 
 <body>
-<div style="margin-top:5%"; align="center">
+<div style="margin-top:2%"; align="center">
 
     <h2  align="center"style="text-decoration:underline">Merci de faire votre choix : </h2><br>
 
@@ -16,25 +17,28 @@
     <a class="btn btn-primary" href="{{ path('musicien_list') }}" role="button">Modification d'un musicien en base</a><br><br>
     <a class="btn btn-danger" href="{{ path('musicien_remove') }}" role="button"> Suppression d'un musicien en base</a><br><br>
 
-            <table style="margin-left: 10%" class="table table-hover">
+            <table class="table-default" style="font-size: 120%">
+
                 <thead>
                 <tr>
-                    <th scope="col">Nom</th>
-                    <th scope="col">Instrument</th>
-                    <th scope="col">Mail</th>
-                    <th scope="col">Date de création</th>
+                    <th  scope="col"> Nom </th>
+                    <th  scope="col"> Instrument </th>
+                    <th  scope="col"> Mail </th>
+                    <th  scope="col"> Date de création </th>
                 </tr>
                 </thead>
                 <tbody>
                 {% for key,musicien in musiciens %}
-                    <tr>
-                        <td>{{ musicien.getName() }}</td>
-                        <td>{{ musicien.getInstrument() }}</td>
-                        <td>{{ musicien.getMail() }}</td>
-                        <td>{{ musicien.getCreatedAt() | date('d/m/Y H:i') }}</td>
-                    </tr>
+                <tr class="table-default">
+                    <td scope="row">{{ musicien.getName() }}</td>
+                    <td>{{ musicien.getInstrument() }}</td>
+                    <td>{{ musicien.getMail() }}</td>
+                    <td>{{ musicien.getCreatedAt() | date('d/m/Y H:i') }}</td>
+                </tr>
                 {% endfor %}
             </table>
+
+    <br>
 </div>
 </body>
 </html>

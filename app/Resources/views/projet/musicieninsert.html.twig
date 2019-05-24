@@ -5,71 +5,19 @@
 <head>
     <meta charset="UTF-8" />
 
-    <div align="center"style="font-size: 30px; color: white ; background-color: olive ">Page d'ajout en base de données</div>
+  <br>  <h1 align="center"style="font-size: 30px; color: white ; background-color: olive ">Page d'ajout en base de données</h1>
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
 </head>
 <body>
 <div style="margin-top:5%"; align="center">
-<h2  align="center"style="text-decoration:underline"> Ajouter un musicien : </h2><br>
-    <form>
-        <fieldset>
-
-            <div class="form-group row">
-                <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
-                <div class="col-sm-10">
-                    <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" value="email@example.com">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-            </div>
-            <div class="form-group">
-                <label for="exampleSelect1">Example select</label>
-                <select class="form-control" id="exampleSelect1">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="exampleSelect2">Example multiple select</label>
-                <select multiple="" class="form-control" id="exampleSelect2">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="exampleTextarea">Example textarea</label>
-                <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
-            </div>
-            <div class="form-group">
-                <label for="exampleInputFile">File input</label>
-                <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
-                <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
-            </div>
-            
-
-
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </fieldset>
+<h2  align="center"style="text-decoration:underline"> Veuillez compléter les champs</h2><br>
 
 {{ form_start(formMusicien) }}
-    {{ form_row(formMusicien.name) }}
-    {{ form_row(formMusicien.instrument) }}
-    {{ form_row(formMusicien.mail) }}
-<input type="submit" value="Enregistrer le musicien" />
-{{ form_end(formMusicien) }}
+    {{ form_row(formMusicien.name) }}<br>
+    {{ form_row(formMusicien.instrument) }}<br>
+    {{ form_row(formMusicien.mail) }}<br><br>
+    <button type="submit" class="btn btn-primary">Enregistrement</button>
+    {{ form_end(formMusicien) }}
 </div>
 {% block javascripts %}{% endblock %}
 </body>

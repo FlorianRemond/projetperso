@@ -2,13 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f007a8c-be9a-4d94-8330-0b2d6519e160" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/css/boostSup2.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/bootSup.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/info.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/tableau.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/projet/MusicienListview.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/projet/MusicienListview.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/views/projet/globalview.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/projet/globalview.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/views/projet/musicieninsert.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/projet/musicieninsert.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/projet/musicienremoveview.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/projet/musicienremoveview.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/MusicienController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/MusicienController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Form/MusicienType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Form/MusicienType.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,46 +38,86 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/projet/globalview.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="4" column="70" selection-start-line="4" selection-start-column="70" selection-end-line="4" selection-end-column="70" />
-              <folding>
-                <element signature="n#style#0;n#h2#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#530#536#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/projet/musicieninsert.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="74" column="16" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="16" />
+            <state relative-caret-position="336">
+              <caret line="17" column="127" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="127" />
               <folding>
                 <element signature="e#12#26#0#Twig" expanded="true" />
-                <element signature="e#317#338#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#h1#0;n#head#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h2#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/projet/globalview.html.twig">
+        <entry file="file://$PROJECT_DIR$/web/css/tableau.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="196">
-              <caret line="10" column="4" selection-start-line="10" selection-end-line="10" selection-end-column="43" />
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="10" column="70" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/projet/musicienremoveview.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="11" column="1" selection-start-line="11" selection-end-line="11" selection-end-column="107" />
               <folding>
                 <element signature="e#12#26#0#Twig" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#110#174#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/projet/MusicienListview.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="700">
+              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+              <folding>
+                <element signature="e#12#26#0#Twig" expanded="true" />
+                <element signature="n#style#0;n#h1#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#p#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/MusicienController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="349">
+              <caret line="124" column="52" selection-start-line="124" selection-start-column="52" selection-end-line="124" selection-end-column="52" />
+              <folding>
+                <element signature="e#40#72#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -99,25 +141,26 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/InstrumentController.php" />
         <option value="$PROJECT_DIR$/web/css/style.css" />
         <option value="$PROJECT_DIR$/app/Resources/views/projet/musicienupdateview.html.twig" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Form/MusicienType.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/projet/musicienview.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Repository/MusicienRepository.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/projet/musicienupdate.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/projet/muscienList.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/projet/musicienList.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/projet/musicienremoveview.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/projet/instrumentview.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Musicien.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/projet/musicienviewid.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/projet/musicienupdateId.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/projet/MusicienListview.html.twig" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/MusicienController.php" />
         <option value="$PROJECT_DIR$/web/css/bootSup.css" />
         <option value="$PROJECT_DIR$/web/css/boostSup2.css" />
         <option value="$PROJECT_DIR$/web/css/info.txt" />
-        <option value="$PROJECT_DIR$/app/Resources/views/projet/globalview.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Form/MusicienType.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/projet/musicieninsert.html.twig" />
+        <option value="$PROJECT_DIR$/web/css/tableau.css" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/projet/globalview.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/projet/musicienremoveview.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/projet/MusicienListview.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/MusicienController.php" />
       </list>
     </option>
   </component>
@@ -280,6 +323,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/web/css" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="Symfony2.SettingsForm" />
@@ -325,38 +369,17 @@
       <workItem from="1558594901848" duration="19293000" />
       <workItem from="1558622510915" duration="637000" />
       <workItem from="1558680953195" duration="254000" />
-      <workItem from="1558681228713" duration="12708000" />
+      <workItem from="1558681228713" duration="22097000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107166000" />
+    <option name="totallyTimeSpent" value="116555000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" weight="0.16614583" />
-      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" />
-      <window_info anchor="bottom" id="Database Changes" order="1" />
-      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="3" />
-      <window_info anchor="bottom" id="Docker" order="4" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Message" order="5" />
-      <window_info anchor="bottom" id="Find" order="6" weight="0.32861805" />
-      <window_info anchor="bottom" id="Run" order="7" />
-      <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="11" />
-      <window_info anchor="right" id="Database" order="0" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-    </layout>
-    <layout-to-restore>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.16614583" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
@@ -376,7 +399,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-    </layout-to-restore>
+    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -473,16 +496,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/MusicienType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="566">
-          <caret line="21" column="92" selection-start-line="19" selection-start-column="12" selection-end-line="21" selection-end-column="92" />
-          <folding>
-            <element signature="e#34#74#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -550,13 +563,6 @@
     <entry file="file://$PROJECT_DIR$/web/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/projet/MusicienListview.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/projet/musicienviewid.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
@@ -592,27 +598,10 @@
         <state relative-caret-position="-84" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/MusicienController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1466">
-          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-          <folding>
-            <element signature="e#40#72#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/projet/musicienupdateId.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="588">
           <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/projet/musicienremoveview.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -646,36 +635,84 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/MusicienType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="4" column="70" selection-start-line="4" selection-start-column="70" selection-end-line="4" selection-end-column="70" />
+        <state relative-caret-position="517">
+          <caret line="19" column="82" selection-start-line="19" selection-start-column="82" selection-end-line="19" selection-end-column="82" />
           <folding>
-            <element signature="n#style#0;n#h2#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#530#536#0#HTML" expanded="true" />
+            <element signature="e#34#74#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/tableau.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/projet/musicieninsert.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+            <element signature="e#115#179#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/projet/globalview.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="10" column="4" selection-start-line="10" selection-end-line="10" selection-end-column="43" />
+        <state relative-caret-position="336">
+          <caret line="17" column="127" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="127" />
           <folding>
             <element signature="e#12#26#0#Twig" expanded="true" />
+            <element signature="n#style#0;n#h1#0;n#head#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/projet/musicieninsert.html.twig">
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="74" column="16" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="16" />
+        <state relative-caret-position="258">
+          <caret line="10" column="70" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/projet/musicienremoveview.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="11" column="1" selection-start-line="11" selection-end-line="11" selection-end-column="107" />
           <folding>
             <element signature="e#12#26#0#Twig" expanded="true" />
-            <element signature="e#317#338#0#HTML" expanded="true" />
+            <element signature="e#110#174#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/projet/MusicienListview.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+            <element signature="n#style#0;n#h1#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#p#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/MusicienController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="124" column="52" selection-start-line="124" selection-start-column="52" selection-end-line="124" selection-end-column="52" />
+          <folding>
+            <element signature="e#40#72#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Projet Personnel{% endblock %}</title>
-        {% block stylesheets %}
+        {% block style %}
 
         {% endblock %}
+        <meta charset="UTF-8" />
+        <title>{% block title %}Projet Personnel{% endblock %}</title>
+
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         <link rel="stylesheet" href="{{ asset('css/bootSup.css') }}"/>
         <link rel="stylesheet" href="{{ asset('css/bootSup2.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('css/tableau.css') }}"/>
     </head>
+     {% block head %}
+
+     {% endblock %}
     <body>
         {% block body %}
             <h2  align="center"style="text-decoration:underline">Merci de faire votre choix : </h2><br>

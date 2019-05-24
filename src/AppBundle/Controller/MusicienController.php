@@ -122,7 +122,7 @@ class MusicienController extends Controller
             $em->remove($musicien);
             $em->flush();
         }
-        return new Response("Musicien bien supprimé");
+        return $this->redirectToRoute('globalview');
     }
 
     /**
